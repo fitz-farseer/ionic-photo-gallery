@@ -17,14 +17,6 @@
 </ion-content>
 
 <ion-content>
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)='addPhotoToGallery()'>
-      <ion-icon name="camera"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-</ion-content>
-
-<ion-content>
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
@@ -32,6 +24,10 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  
-  <!-- ion-fab markup  -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)='addPhotoToGallery()'>
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
+
